@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "build.mta",
+			"label": "Build MTA-buttonproj-mta.yaml",
+			"taskType": "Build",
+			"projectPath": "/home/user/projects/devopspoc/projsample/buttonproj",
+			"extensions": []
+		},
+		{
+			"type": "npm",
+			"label": "deploy-config",
+			"script": "deploy-config"
+		},
+		{
+			"type": "deploy.mta.cf",
+			"label": "Deploy-MTA-CF",
+			"taskType": "Deploy",
+			"mtarPath": "/home/user/projects/devopspoc/projsample/buttonproj/mta_archives/buttonproj_0.0.1.mtar",
+			"cfTarget": "sc-cicd",
+			"cfEndpoint": "https://api.cf.ap11.hana.ondemand.com",
+			"cfOrg": "Standard Chartered Bank_core-foundational-12982zqn",
+			"cfSpace": "SC-CICD",
+			"extensions": []
+		}
+	]
+}
